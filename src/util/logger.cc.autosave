@@ -1,0 +1,22 @@
+#include "logger.h"
+
+namespace vspider {
+
+logger::logger(const std::string& name, const::string& parent_name)
+    : _ls(nullptr)
+{
+    
+}
+
+logger::~logger()
+{
+    delete _ls;
+    _ls = nullptr;
+}
+
+Poco::Logger& logger()
+{
+    return Poco::Logger::get()
+}
+
+}
